@@ -1,0 +1,44 @@
+import random
+
+# Lista de dicas de viagem
+dicas_de_viagem = [
+    "Faça uma lista de verificação antes de viajar para não esquecer nada.",
+    "Leve sempre um adaptador universal de tomada.",
+    "Tenha uma cópia digital e impressa dos seus documentos importantes.",
+    "Aprenda algumas frases básicas no idioma local.",
+    "Sempre informe alguém sobre seu itinerário de viagem.",
+    "Mantenha seu dinheiro e cartões em lugares diferentes para maior segurança.",
+    "Experimente a comida local.",
+    "Seja flexível com seu itinerário.",
+    "Use transporte público para economizar dinheiro.",
+    "Tenha um kit de primeiros socorros básico.",
+    "Leve uma garrafa de água reutilizável.",
+    "Pesquise sobre a cultura e os costumes do destino.",
+    "Faça um seguro de viagem.",
+    "Use roupas e calçados confortáveis para explorar.",
+    "Tenha sempre um plano B em caso de mudanças no itinerário."
+]
+
+def mostrar_dica_aleatoria():
+    dica = random.choice(dicas_de_viagem)
+    print("\nDica de Viagem:")
+    print(dica)
+
+def menu_principal():
+    while True:
+        print("\n=== Aplicativo de Dicas de Viagem ===")
+        print("1. Mostrar uma dica de viagem")
+        print("2. Sair")
+        
+        escolha = input("Escolha uma opção: ")
+        
+        if escolha == '1':
+            mostrar_dica_aleatoria()
+        elif escolha == '2':
+            print("Obrigado por usar o aplicativo de dicas de viagem. Boa viagem!")
+            break
+        else:
+            print("Opção inválida. Por favor, escolha novamente.")
+
+# Executa o menu principal
+menu_principal()
